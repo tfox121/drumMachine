@@ -1,25 +1,58 @@
 <html lang='en'>
 
-<head>
-  <meta charset='utf-8'>
-  <meta name='druum machine' content='drum machine'>
-  <title>Drum Machine</title>
-  <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
-  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' type='text/css'>
-  <link rel='stylesheet' href='css/styles.css' type='text/css'>
-</head>
-<body>
-
-</body>
-<script
-  src='https://code.jquery.com/jquery-3.4.1.min.js'
-  integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo='
-  crossorigin='anonymous'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js'></script>
-<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-<script type="text/babel" src='js/script.js'></script>
-<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='drum machine' content='drum machine'>
+    <title>Drum Machine</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css' type='text/css'>
+    <link rel='stylesheet' href='css/styles.css' type='text/css'>
+  </head>
+  <body class="container-fluid h-100 w-100 bg-dark" onkeypress="reply_key(event);">
+    <div class="h-100 row align-items-center" id="wrapper">
+      <div class="row mx-auto" id="drum-machine">
+        <div class="col-md-6" id="drum-pads">
+          <buttton class="drum-pad btn-secondary" id="bass-drum" onClick="reply_click(this.id)">
+            Q<audio src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/8[kb]80s-Bdrum1.aif.mp3" class="clip" id="Q"></audio>
+          </buttton>
+          <buttton class="drum-pad btn-secondary" id="crash" onClick="reply_click(this.id)">
+            W<audio src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/83[kb]80s-CRASH1.aif.mp3" class="clip" id="W"></audio>
+          </buttton>
+          <buttton class="drum-pad btn-secondary" id="hh-close" onClick="reply_click(this.id)">
+            E<audio src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/7[kb]80s-HHCLOSE1.aif.mp3" class="clip" id="E"></audio>
+          </buttton>
+          <buttton class="drum-pad btn-secondary" id="hh-open" onClick="reply_click(this.id)">
+            A<audio src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/38[kb]80s-HHOPEN2.aif.mp3" class="clip" id="A"></audio>
+          </buttton>
+          <buttton class="drum-pad btn-secondary" id="snare" onClick="reply_click(this.id)">
+            S<audio src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/15[kb]80s-SNARE1.aif.mp3" class="clip" id="S"></audio>
+          </buttton>
+          <buttton class="drum-pad btn-secondary" id="tamb" onClick="reply_click(this.id)">
+            D<audio src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/20[kb]80s-TAMB1.aif.mp3" class="clip" id="D"></audio>
+          </buttton>
+          <buttton class="drum-pad btn-secondary" id="tom-1" onClick="reply_click(this.id)">
+            Z<audio src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/15[kb]80s-TOM1.aif.mp3" class="clip" id="Z"></audio>
+          </buttton>
+          <buttton class="drum-pad btn-secondary" id="tom-2" onClick="reply_click(this.id)">
+            X<audio src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/15[kb]80s-TOM2.aif.mp3" class="clip" id="X"></audio>
+          </buttton>
+          <buttton class="drum-pad btn-secondary" id="conga" onClick="reply_click(this.id)">
+            C<audio src="https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DRUM%20MACHINES/80s%20Drum%20Machine/10[kb]80s-MIDCONGA.aif.mp3" class="clip" id="C"></audio>
+          </button>
+        </div>
+        <div class="col-md-6" id="display"></div>
+      </div>
+    </div>  
+  </body>
+  <script
+    src='https://code.jquery.com/jquery-3.4.1.min.js'
+    integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo='
+    crossorigin='anonymous'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-color/2.1.2/jquery.color.min.js'></script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script type="text/babel" src='js/script.js'></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 </html> 

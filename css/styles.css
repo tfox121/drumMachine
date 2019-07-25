@@ -1,0 +1,56 @@
+body {
+    max-width:100%;
+    max-height: 100%
+}
+
+#wrapper {
+    max-width:100%;
+    max-height: 100%
+}
+
+#drum-machine {
+    width: 42em;
+    max-width: 95%;
+    min-height: 20em;
+    border: solid orange 5px;
+    background-color: lightsteelblue
+}
+
+#drum-pads {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    align-items: center;
+    padding: 3%;
+}
+
+.drum-pad {
+    display: inline-flex;
+    width: 90%;
+    height: 90%;
+    align-items: center;   
+    justify-content: center;
+    box-shadow: 0.2em 0.2em 0.5em #000000;
+    color: black;
+    font-weight: bold;
+}
+
+#display {
+    background-color: #6c757d;
+    display: inline-flex;
+    align-items: center;   
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.6em;
+    border: solid black 5px;
+    margin: auto;
+    min-height: 2em;
+    max-width: 7em
+}
+
+
+.btn-secondary:hover {
+    background-color: #6c757d;
+    color: black;
+}
