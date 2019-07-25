@@ -1,0 +1,23 @@
+{
+  "name": "drummachine",
+  "version": "1.0.0",
+  "description": "See it in action [here](https://tfox121.github.io/)!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tfox121/drumMachine.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tfox121/drumMachine/issues"
+  },
+  "homepage": "https://github.com/tfox121/drumMachine#readme",
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-plugin-react": "^7.14.3"
+  }
+}

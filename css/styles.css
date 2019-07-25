@@ -1,0 +1,33 @@
+body {
+    max-width:100%;
+    max-height: 100%
+}
+
+#wrapper {
+    max-width:100%;
+    max-height: 100%
+}
+
+#drum-machine {
+    width: 40em;
+    max-width: 95%;
+    min-height: 20em;
+    border: solid orange 5px;
+}
+
+#drum-pads > div {
+    height: 100%
+}
+
+#drum-pads {
+    display: flex;
+    flex-direction: column;
+}
+
+#display {
+}
+
+.drum-pad {
+    height: 80%;
+    width: 33%
+}
